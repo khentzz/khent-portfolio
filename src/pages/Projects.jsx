@@ -40,7 +40,6 @@ function Projects() {
         } else {
             // Ordering System images
             if (project.screenshots.products) images.push({ url: project.screenshots.products, title: 'Product Listing' })
-            if (project.screenshots.cart) images.push({ url: project.screenshots.cart, title: 'Shopping Cart' })
             if (project.screenshots.checkout) images.push({ url: project.screenshots.checkout, title: 'Checkout' })
             if (project.screenshots.database) images.push({ url: project.screenshots.database, title: 'Database Design' })
         }

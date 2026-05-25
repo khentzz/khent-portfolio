@@ -1,4 +1,4 @@
-// Import HRIS images (only these exist)
+// Import HRIS images
 import hrisLogin from '../assets/projects/hris/login.png'
 import hrisDashboard from '../assets/projects/hris/dashboard.png'
 import hrisProfile from '../assets/projects/hris/employee-profile.png'
@@ -7,6 +7,11 @@ import hrisAdmin from '../assets/projects/hris/admin.png'
 import hrisErd from '../assets/projects/hris/erd.png'
 import hrisAttendance from '../assets/projects/hris/attendance-kiosk.png'
 import hrisDtr from '../assets/projects/hris/dtr.png'
+
+// Import Ordering System images
+import orderingProducts from '../assets/projects/ordering/products.png'
+import orderingCheckout from '../assets/projects/ordering/checkout.png'
+import orderingDatabase from '../assets/projects/ordering/database.png'
 
 export const projectsData = [
     {
@@ -23,7 +28,8 @@ export const projectsData = [
             "Administrative Controls",
             "Database Integration",
             "Mobile Attendance Kiosk",
-            "Daily Time Record (DTR)"
+            "Daily Time Record (DTR)",
+            "Cron Job (Automated Montly Leave Credit)"
         ],
         contributions: [
             "Designed database structure",
@@ -50,11 +56,10 @@ export const projectsData = [
     {
         id: 2,
         title: "Ordering System",
-        overview: "A web-based ordering system developed to streamline order placement, product management, and transaction tracking.",
+        overview: "A web-based ordering system developed to streamline order placement, product management, and Order Receipt Generation.",
         technologies: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
         features: [
             "Product Listing",
-            "Shopping Cart",
             "Order Management",
             "Transaction Tracking",
             "Database Storage",
@@ -69,10 +74,9 @@ export const projectsData = [
         ],
         challenge: "One of the challenges I faced while developing the Ordering System was managing the flow of order information from product selection to order processing while ensuring accurate data storage. I solved this by implementing structured database tables, validating user inputs, and designing a workflow that allowed orders to be tracked efficiently throughout the process.",
         screenshots: {
-            products: "https://via.placeholder.com/800x400/1E293B/3B82F6?text=Product+Listing+(Coming+Soon)",
-            cart: "https://via.placeholder.com/800x400/1E293B/3B82F6?text=Shopping+Cart+(Coming+Soon)",
-            checkout: "https://via.placeholder.com/800x400/1E293B/3B82F6?text=Checkout+(Coming+Soon)",
-            database: "https://via.placeholder.com/800x400/1E293B/3B82F6?text=Database+Design+(Coming+Soon)"
+            products: orderingProducts,
+            checkout: orderingCheckout,
+            database: orderingDatabase
         }
     }
 ]
