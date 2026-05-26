@@ -174,7 +174,7 @@ const getProjectImages = (project) => {
                                                     </div>
                                                     {images.length > 6 && (
                                                         <p style={{ fontSize: '0.8rem', color: 'var(--gray)', marginTop: '0.5rem' }}>
-                                                            +{images.length - 6} more screenshots
+                                                            
                                                         </p>
                                                     )}
                                                 </div>
