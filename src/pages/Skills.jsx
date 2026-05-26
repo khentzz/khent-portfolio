@@ -1,8 +1,8 @@
 function Skills() {
   const skills = {
-    Languages: ['PHP', 'JavaScript', 'HTML5', 'CSS3', 'SQL'],
-    Databases: ['MySQL', 'MySQL Workbench', 'Database Design', 'Data Management'],
-    Tools: ['VS Code', 'Git', 'GitHub', 'XAMPP', 'PHPMailer'],
+    Languages: ['PHP', 'JavaScript', 'HTML5', 'CSS3', 'SQL', 'Java', "C++", 'Kotlin'],
+    Databases: ['MySQL', 'MySQL Workbench', 'Supabase'],
+    Tools: ['VS Code', 'Git', 'GitHub', 'XAMPP', 'PHPMailer', 'Android Studio', 'Eclipse IDE', 'Formspree'],
     'Soft Skills': ['Leadership', 'Communication', 'Technical Writing', 'Problem Solving', 'Project Documentation']
   }
 

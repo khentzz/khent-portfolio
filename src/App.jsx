@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+﻿import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -14,6 +14,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+       <div style={{ paddingTop: '70px' }}>  {}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -23,6 +24,7 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+       </div>  {}
       <Footer />
     </Router>
   )

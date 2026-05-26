@@ -23,12 +23,10 @@ function Projects() {
         setActiveProject(null)
     }
 
-    // Get all screenshot images for a project
     const getProjectImages = (project) => {
         const images = []
 
         if (project.id === 1) {
-            // HRIS images
             if (project.screenshots.login) images.push({ url: project.screenshots.login, title: 'Login Page' })
             if (project.screenshots.dashboard) images.push({ url: project.screenshots.dashboard, title: 'Dashboard' })
             if (project.screenshots.profile) images.push({ url: project.screenshots.profile, title: 'Employee Profile' })
