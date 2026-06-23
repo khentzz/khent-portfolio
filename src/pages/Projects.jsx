@@ -23,34 +23,27 @@ function Projects() {
         setActiveProject(null)
     }
 
-const getProjectImages = (project) => {
-    const images = []
+    const getProjectImages = (project) => {
+        const images = []
 
-    if (project.id === 1) {
-        // HRIS images
-        if (project.screenshots.login) images.push({ url: project.screenshots.login, title: 'Login Page' })
-        if (project.screenshots.dashboard) images.push({ url: project.screenshots.dashboard, title: 'Dashboard' })
-        if (project.screenshots.profile) images.push({ url: project.screenshots.profile, title: 'Employee Profile' })
-        if (project.screenshots.leave) images.push({ url: project.screenshots.leave, title: 'Leave Management' })
-        if (project.screenshots.admin) images.push({ url: project.screenshots.admin, title: 'Admin Dashboard' })
-        if (project.screenshots.erd) images.push({ url: project.screenshots.erd, title: 'Database ERD' })
-        if (project.screenshots.attendanceKiosk) images.push({ url: project.screenshots.attendanceKiosk, title: 'Mobile Attendance Kiosk' })
-        if (project.screenshots.dtr) images.push({ url: project.screenshots.dtr, title: 'Daily Time Record (DTR)' })
-    } else if (project.id === 2) {
-        // Ordering System images
-        if (project.screenshots.products) images.push({ url: project.screenshots.products, title: 'Product Listing' })
-        if (project.screenshots.checkout) images.push({ url: project.screenshots.checkout, title: 'Checkout' })
-        if (project.screenshots.database) images.push({ url: project.screenshots.database, title: 'Database Design' })
-    } else if (project.id === 3) {
-        // FoodHub POS images
-        if (project.screenshots.dashboard) images.push({ url: project.screenshots.dashboard, title: 'Admin Dashboard' })
-        if (project.screenshots.pos) images.push({ url: project.screenshots.pos, title: 'Cashier POS' })
-        if (project.screenshots.reports) images.push({ url: project.screenshots.reports, title: 'Sales Reports' })
-        if (project.screenshots.receipt) images.push({ url: project.screenshots.receipt, title: 'Receipt Sample' })
+        if (project.id === 1) {
+            if (project.screenshots.login) images.push({ url: project.screenshots.login, title: 'Login Page' })
+            if (project.screenshots.dashboard) images.push({ url: project.screenshots.dashboard, title: 'Dashboard' })
+            if (project.screenshots.profile) images.push({ url: project.screenshots.profile, title: 'Employee Profile' })
+            if (project.screenshots.leave) images.push({ url: project.screenshots.leave, title: 'Leave Management' })
+            if (project.screenshots.admin) images.push({ url: project.screenshots.admin, title: 'Admin Dashboard' })
+            if (project.screenshots.erd) images.push({ url: project.screenshots.erd, title: 'Database ERD' })
+            if (project.screenshots.attendanceKiosk) images.push({ url: project.screenshots.attendanceKiosk, title: 'Mobile Attendance Kiosk' })
+            if (project.screenshots.dtr) images.push({ url: project.screenshots.dtr, title: 'Daily Time Record (DTR)' })
+        } else {
+            // Ordering System images
+            if (project.screenshots.products) images.push({ url: project.screenshots.products, title: 'Product Listing' })
+            if (project.screenshots.checkout) images.push({ url: project.screenshots.checkout, title: 'Checkout' })
+            if (project.screenshots.database) images.push({ url: project.screenshots.database, title: 'Database Design' })
+        }
+
+        return images
     }
-
-    return images
-}
 
     return (
         <section>

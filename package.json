@@ -1,4 +1,5 @@
 {
+  "homepage": "https://khentzz.github.io/khent-portfolio",
   "name": "khent-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -19,6 +20,7 @@
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^10.4.0",
     "gh-pages": "^6.3.0",
     "vite": "^5.0.8"
   }
