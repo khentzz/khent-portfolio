@@ -1,23 +1,66 @@
+import React, { useEffect, useRef } from 'react';
+
 function About() {
+  const timelineRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const items = timelineRef.current;
+    items.forEach((el) => el && observer.observe(el));
+
+    return () => {
+      items.forEach((el) => el && observer.unobserve(el));
+    };
+  }, []);
+
+  const timelineData = [
+    { year: '2022', title: 'Started Learning Programming', description: 'Began my journey into software development with HTML, CSS, and JavaScript.' },
+    { year: '2023', title: 'Built First Ordering System', description: 'Developed my first full-stack web application using PHP and MySQL.' },
+    { year: '2024', title: 'HRIS Capstone Project', description: 'Completed a comprehensive Human Resource Information System as a capstone project.' },
+    { year: '2025', title: 'Built FoodHub POS', description: 'Created a complete Point of Sale system with inventory and reporting features.' },
+    { year: '2026', title: 'Seeking Software Engineer Opportunities', description: 'Looking for roles where I can contribute, learn, and build impactful software.' },
+  ];
+
   return (
     <section>
       <div className="container">
-        <h2>About Me</h2>
-        <div className="glass-card" style={{ marginBottom: '2rem' }}>
-          <h3>Introduction</h3>
-          <p>
-            I am a Bachelor of Science in Information Technology graduate from Central Philippines State University - Valladolid Campus with experience in developing web-based systems using PHP, JavaScript, HTML, CSS, and MySQL. Throughout my academic journey, I have designed and developed information systems focused on improving organizational efficiency, data management, and user experience. I am passionate about technology, problem-solving, and continuously expanding my skills in software and web development.
+        <h2 className="reveal">My Story</h2>
+        <div className="glass-card" style={{ marginBottom: '3rem' }}>
+          <p style={{ fontSize: '1.1rem' }}>
+            I am a BS Information Technology graduate from Central Philippines State University – Valladolid Campus.
+            My passion lies in building practical, database-driven solutions that solve real problems.
+            I thrive at the intersection of backend logic, frontend experience, and system architecture.
           </p>
         </div>
-        <div className="glass-card">
-          <h3>Career Objective</h3>
-          <p>
-            Seeking an entry-level position in software development, web development, or information systems where I can apply my technical knowledge, problem-solving abilities, and passion for technology while contributing to organizational success and professional growth.
-          </p>
+
+        <div className="timeline">
+          {timelineData.map((item, index) => (
+            <div
+              key={index}
+              className="timeline-item"
+              ref={(el) => (timelineRef.current[index] = el)}
+            >
+              <div className="timeline-content">
+                <h3 style={{ color: 'var(--accent)' }}>{item.year}</h3>
+                <p style={{ fontWeight: 'bold' }}>{item.title}</p>
+                <p style={{ color: 'var(--gray)', fontSize: '0.9rem' }}>{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;
